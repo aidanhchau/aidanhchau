@@ -1,0 +1,16 @@
+Creating webset...
+Traceback (most recent call last):
+  File "/home/user/aidanhchau/build_webset.py", line 100, in <module>
+    main()
+  File "/home/user/aidanhchau/build_webset.py", line 75, in main
+    webset = exa.websets.create(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/exa_py/websets/client.py", line 53, in create
+    response = self.request("/v0/websets", data=params, options=options)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/exa_py/websets/core/base.py", line 129, in request
+    return self._client.request("/websets/" + endpoint, data=data, method=method, params=params) 
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/exa_py/api.py", line 1524, in request
+    raise ValueError(
+ValueError: Request failed with status code 401: {"statusCode":401,"timestamp":"2026-04-16T18:04:40.370Z","message":"Your team (Maple - aidan@getanalog.ai) does not have access to the API. Upgrade to a Pro plan to get access.","error":"Unauthorized","path":"/v0/websets","requestId":"ecd90ed99b53d8faaeda39b2a046df2b"}
